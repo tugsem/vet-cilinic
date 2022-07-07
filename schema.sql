@@ -27,7 +27,7 @@ DROP COLUMN species;
 ALTER TABLE animals
 ADD COLUMN species_id INT;
 
-ALTER TABLE animasls
+ALTER TABLE animals
 ADD COLUMN owner_id INT;
 
 ALTER TABLE animals
