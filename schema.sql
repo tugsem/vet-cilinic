@@ -57,3 +57,9 @@ ADD FOREIGN KEY(species_id) REFERENCES species(species_id);
 ALTER TABLE specializations
 ADD FOREIGN KEY(vet_id) REFERENCES vets(id);
 
+/*performance audit*/
+
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+CREATE INDEX animal_id_asc ON visits(animal_id ASC);
+CREATE INDEX vets_index ON visits(vet_id);
+CREATE INDEX email_asc ON owners(email ASC);
